@@ -1,0 +1,15 @@
+<div class="container-articles">
+  <div class="header-article">
+    <h2><%= @article.title %></h2>
+    <%= link_to edit_article_path(@article) do %>
+      <span class="icons"><i class="fa-solid fa-pencil"></i></span>
+    <% end %>
+    <%= link_to(article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) do %>
+      <span class="icons"><i class="fa-regular fa-trash-can"></i></span>
+    <% end %>
+  </div>
+  <hr>
+  <p class="text-article"><%= @article.content %></p>
+</div>
+
+<%# alert when article successfully created/updated (that can be closed) %>

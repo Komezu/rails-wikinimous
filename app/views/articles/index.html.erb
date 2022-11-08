@@ -1,0 +1,12 @@
+<div class="container-articles">
+  <% @articles.each do |article| %>
+    <div class="article">
+      <%= link_to(article_path(article)) do %>
+        <h3><%= article.title %></h3>
+      <% end %>
+      <p><%= article.content %></p>
+    </div>
+  <% end %>
+</div>
+
+<%# article successfully destroyed notice (closeable) %>
