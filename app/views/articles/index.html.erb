@@ -1,4 +1,8 @@
 <div class="container">
+  <% if flash.any? %>
+    <div class="alert alert-info"><%= flash.notice %></div>
+  <% end %>
+
   <% @articles.each do |article| %>
     <div class="card-article">
       <%= link_to(article_path(article)) do %>
@@ -8,5 +12,3 @@
     </div>
   <% end %>
 </div>
-
-<%# article successfully destroyed notice (closeable) %>

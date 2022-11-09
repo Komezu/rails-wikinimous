@@ -14,19 +14,19 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.create(article_params)
-    redirect_to article_path(@article)
+    redirect_to article_path(@article), notice: 'Article was successfully created.'
   end
 
   def edit() end
 
   def update
     @article.update(article_params)
-    redirect_to article_path(@article)
+    redirect_to article_path(@article), notice: 'Article was successfully updated.'
   end
 
   def destroy
     @article.destroy
-    redirect_to articles_path, status: :see_other
+    redirect_to articles_path, status: :see_other, notice: 'Article was successfully destroyed.'
   end
 
   private

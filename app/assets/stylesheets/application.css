@@ -65,7 +65,7 @@ form {
 
 .text-article {
   opacity: 0.8;
-  margin-top: 25px;
+  margin: 25px auto;
 }
 
 .header-article {
@@ -83,6 +83,7 @@ form {
 .link-back {
   display: block;
   text-align: right;
+  color: #3679C6;
 }
 
 .multi-links {
@@ -92,4 +93,11 @@ form {
 
 #divider {
   padding: 0 8px;
+}
+
+.alert-info {
+  padding: 12px 16px;
+  background-color: #E2F1FF;
+  font-size: 14px;
+  border-color: #9CC8F5;
 }

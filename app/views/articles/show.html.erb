@@ -1,4 +1,8 @@
 <div class="container">
+  <% if flash.any? %>
+    <div class="alert alert-info"><%= flash.notice %></div>
+  <% end %>
+
   <div class="header-article">
     <h2><%= @article.title %></h2>
     <%= link_to edit_article_path(@article) do %>
@@ -10,6 +14,8 @@
   </div>
   <hr>
   <p class="text-article"><%= @article.content %></p>
-</div>
 
-<%# alert when article successfully created/updated (that can be closed) %>
+  <%= link_to(articles_path, class: "link-back") do %>
+    <i class="fa-regular fa-circle-left"></i> Back
+  <% end %>
+</div>
