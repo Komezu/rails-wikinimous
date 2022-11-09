@@ -6,6 +6,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+h1 {
+  font-size: 32px;
+}
+
 h2, h3 {
   font-family: "Crete Round", serif;
 }
@@ -18,11 +22,15 @@ h2 {
 h3 {
   color: #4A8AD4;
   padding-top: 15px;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 a {
   text-decoration: none;
+}
+
+form {
+  margin: 25px auto;
 }
 
 .navbar {
@@ -45,12 +53,12 @@ a {
   font-size: 20px;
 }
 
-.container-articles {
+.container {
   width: 750px;
   margin: 20px auto;
 }
 
-.article > p {
+.card-article > p {
   font-weight: 300;
   font-size: 15px;
 }
@@ -65,9 +73,23 @@ a {
   align-items: center;
 }
 
-.icons {
+.icon {
   margin-left: 12px;
   margin-right: -5px;
   font-size: 20px;
   color: #3679C6;
+}
+
+.link-back {
+  display: block;
+  text-align: right;
+}
+
+.multi-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#divider {
+  padding: 0 8px;
 }

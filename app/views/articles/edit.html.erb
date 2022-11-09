@@ -1,12 +1,17 @@
-<h1>Edit Article</h1>
+<div class="container">
+  <h1>Edit article</h1>
 
-<%= form_with model: @article do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :content %>
-  <%= f.text_area :content %>
-  <%= f.submit %>
-<% end %>
+  <%= render "form", article: @article %>
 
-<%= link_to "Show", article_path(@article) %> |
-<%= link_to "Back", articles_path %>
+  <div class="multi-links">
+    <%= link_to(article_path(@article), class: "link-back") do %>
+      <i class="fa-regular fa-file-lines"></i> Show
+    <% end %>
+
+    <span id="divider">|</span>
+
+    <%= link_to(articles_path, class: "link-back") do %>
+      <i class="fa-regular fa-circle-left"></i> Back
+    <% end %>
+  </div>
+</div>
